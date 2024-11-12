@@ -197,6 +197,8 @@ class CMakeWriter:
                 cmake_file.write('add_executable(${PROJECT_NAME}')
                 message(context, 'CMake will build an EXECUTABLE.', '')
             cmake_file.write(' ${ALL_FILES})\n')
+            message(context, '==========Add include CMake/Dependency.cmake.==========', '')
+            cmake_file.write('include(CMake/Dependency.cmake)\n')
 
         if context.project_folder:
             cmake_file.write(
